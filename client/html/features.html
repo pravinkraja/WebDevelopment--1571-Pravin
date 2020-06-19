@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>AMDT</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="stylesheet" href="/css/bootstrap.css" />
+    <link rel="stylesheet" href="/css/custom.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#human-nav-bar").load("/html/partials/navbar.html", function () {
+          $("#nav-feature").addClass("active");
+        });
+        $("#human-footer-bar").load("/html/partials/footer.html");
+      });
+    </script>
+    </head>
+    
+    <body>
+      <header>
+        <div id="human-nav-bar"></div>
+    <main>
+      <div class="text-center human-features-main">
+        <div class="container text-left human-features-container">
+          <div class="row">
+            <div class="col-12 text-center">
+             
+              <p class="lead">
+                <h5>Your are</h5>
+                 <h2 style="font-weight: bolder;">The Center of our Universe</h2>
+              </p>
+              <form id="featureFrm" class="human-features-form">
+                <div class="form-group">
+                  <label>Your Name</label>
+                  <input
+                    id="username"
+                    type="text"
+                    class="form-control"
+                    placeholder="Your name"
+                    required
+                    
+                  />
+                </div>
+                <div class="form-group">
+                  <label>Your Age</label>
+                  <input
+                    id="userage"
+                    type="number"
+                    min="16"
+                    max="40"
+                    class="form-control"
+                    placeholder="Your age"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label>Your suggestion</label>
+                  <textarea id="userfeature" class="form-control" rows="3" required></textarea>
+                </div>
+                <button id="featureSubmitBtn" type="button" class="btn btn-outline-primary">
+                  Submit
+                </button>
+              </form>
+              <div id="featureLoadingDiv" class="human-removed text-center">
+                <img src="/assets/spinner.gif" />
+                <p><i>Sending data to our server ... </i></p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class= "testout">
+          <div class="col-12">
+            <div class="card">
+              <h1 style="color: #ffffff; font-weight: bolder; font-family:lucida sans ; background-color: #a662ff;" >Testimonials</h1>
+              <div class="card-body">
+                <p>
+                  
+                  Hear From Our Students </b>
+                </p>
+                <ul class="list-group list-group-flush" id="feature-list">  
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+   
+
+    </main>
+   <div id="human-footer-bar"></div>
+  </body>
+  <script src="/js/feature.js"></script>
+</html>

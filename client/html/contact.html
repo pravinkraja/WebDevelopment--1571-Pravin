@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>AMDT</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="stylesheet" href="/css/bootstrap.css" />
+    <link rel="stylesheet" href="/css/custom.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script>
+     $(document).ready(function () {
+        $("#human-nav-bar").load("/html/partials/navbar.html", function () {
+          $("nav-contact").addClass("active");
+        });
+        $("#human-footer-bar").load("/html/partials/footer.html");
+      });
+
+    function submit() {
+      console.log('Submit function called..', {
+        name: $("#name").val(),
+        message: $("#message").val(),
+        email: $("#email").val(),
+        message: $("#message").val()
+      });
+      $.post(
+        'http://localhost:8000/html/send-mail',
+        {
+          name: $("#name").val(),
+          message: $("#message").val(),
+          email: $("#email").val(),
+          message: $("#message").val()
+        },
+        function(data, success) {
+          console.log(success, data);
+        }
+      );
+    };
+
+    
+    function mySuccuss() {
+      alert("Thank you for getting in touch! ");
+      };
+
+  </script>
+  </head>
+  
+  <body>
+    <header>
+      <div id="human-nav-bar"></div>
+    </header>
+    <main>
+      <div class="text-center human-features-main">
+        <h1 class="display-4" style="font-weight: normal;">Hope you won’t mind. Don’t worry, <br>
+          we won’t spam you!</h1>
+          <br>
+        <div class="container text-left ">
+          <div class="row">
+            <div class="col">
+              <h3 class="font-weight-bold">Talk to us</h3>
+              
+              <!-- <form class="human-features-form"> -->
+                
+                <form method="POST" id="contact-form" action="send-mail">
+                <div class="form-group" >
+                  <label for="exampleFormControlInput1">Full Name:</label>
+                  <input type="text" class="form-control" id="name" placeholder="Your name" name='name' required>
+                </div>
+                <div class="form-group" >
+                  <label for="exampleFormControlInput1">Address:</label>
+                  <input type="text" class="form-control" id="address" placeholder="Address" name='name' required>
+                </div>
+                <div class="form-group">
+                  <label for="exampleFormControlInput1">Email:</label>
+                  <input type="email" class="form-control" id="email" placeholder="Email" name="email" required>
+                </div>
+                <div class="form-group">
+                  <label for="exampleFormControlTextarea1">Message:</label>
+                  <textarea class="form-control" id="message" rows="3" name="message" required></textarea>
+                </div>
+               <!--- <button class="btn btn-dark" onclick="return submit()">Submit</button>  
+                                        some error please check it -->
+                <button class="btn btn-dark" onclick="mySuccuss()" >Submit</button>
+                <button class="btn btn-outline-primary" type="reset" id="reset"> Reset</button>
+              <!-- </form> -->
+            </div>
+            <div class="col text-center" style="margin-top:-44px">
+              <div class="text-center human-index-div">
+                <h3 class="display-3">Creativity Starts Here..</h3>
+                <p class="lead">
+                  #WeAreAMDT and we are Sri Lanka’s Creative community. 
+                  Join our march towards making Sri Lanka Creative.
+                </p>
+              
+              </div>
+            </div>
+          </form>
+          </div>
+        </div>
+    </main>
+    <footer></footer>
+  </body>
+</html>

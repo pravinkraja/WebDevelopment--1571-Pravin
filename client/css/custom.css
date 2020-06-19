@@ -1,0 +1,54 @@
+/* index.html css */
+
+.human-nav-bar {
+  margin-left: 49%;
+}
+
+.human-index-div {
+  margin: 16%;
+}
+
+.human-footer {
+  color: white;
+  padding: 10px;
+}
+
+/* features.html css */
+
+.human-features-container {
+  margin-top: 3%;
+}
+
+.human-features-main {
+  margin: 3.5%;
+}
+
+/* Common css */
+.human-removed {
+  display: none;
+}
+
+.testout{
+  margin-top: 100px;
+}
+
+.navbar{
+  background: black;
+  font-family: fantasy;
+  font-weight: bolder;
+  color: black;}
+
+  .navbar-dark .navbar-nav .nav-link {
+    font-family: sans-serif;
+  color: rgb(129, 129, 207);
+  
+    /* color: rgba(255, 255, 255, 0.5); */
+}
+
+
+
+.navbar-brand img {width: 90px;}
+
+.navbar-dark .navbar-nav .show > .nav-link, .navbar-dark .navbar-nav .active > .nav-link, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .nav-link.active {
+  color: #220038;
+}
